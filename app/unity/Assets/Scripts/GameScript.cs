@@ -7,7 +7,7 @@ public class GameScript : MonoBehaviour
     /// <summary>
     /// All phases/modes the game can be in.
     /// </summary>
-    enum GameState
+    public enum GameState
     {
         start,
         mainMenu,
@@ -20,6 +20,11 @@ public class GameScript : MonoBehaviour
         gameover,
         exit
     }
+
+    /// <summary>
+    /// All the CanvasGroups that hold all the elements in a specific state
+    /// </summary>
+    public Dictionary<GameState, CanvasGroup> CanvasGroups = new Dictionary<GameState, CanvasGroup>();
 
     /// <summary>
     /// The previous State the game was in
@@ -64,13 +69,23 @@ public class GameScript : MonoBehaviour
         {
             // Track elements that are in the middle of transitioning
             Transitioning = false;
+
+            // To be replaced with FadeScript script
+            if (CanvasGroups.ContainsKey(LastGameState))
+            {
+                CanvasGroups[LastGameState].alpha = 0;
+            }
+            if (CanvasGroups.ContainsKey(CurrentGameState))
+            {
+                CanvasGroups[CurrentGameState].alpha = 1;
+            }
         }
         else
         {
             switch(CurrentGameState)
             {
                 case GameState.start:
-
+                    ChangeState(GameState.mainMenu);
                     break;
 
                 case GameState.mainMenu:
