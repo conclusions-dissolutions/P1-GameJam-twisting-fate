@@ -73,3 +73,5 @@ crashlytics-build.properties
 
 # Artifacts
 /[Li]brary/[Ar]tifacts/*
+
+.vscode
