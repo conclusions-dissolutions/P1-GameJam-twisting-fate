@@ -16,6 +16,11 @@ public class FadeScript : MonoBehaviour
     /// If true - fade in. If false - fade out.
     /// </summary>
     public bool fadeDirection = true;
+
+    /// <summary>
+    /// Variable that holds current in-transition state.
+    /// </summary>
+    private bool isInTransition = false;
     /// <summary>
     /// A CanvasGroup component attached to the same game object as this script.
     /// The alpha property of this component is being manipulated by this script.
@@ -36,6 +41,7 @@ public class FadeScript : MonoBehaviour
     /// </summary>
     public void FadeIn()
     {
+        isInTransition = true;
         fadeDirection = true;
     }
 
@@ -45,7 +51,17 @@ public class FadeScript : MonoBehaviour
     /// </summary>
     public void FadeOut()
     {
+        isInTransition = true;
         fadeDirection = false;
+    }
+
+    /// <summary>
+    /// Check if transition is in progress
+    /// </summary>
+    /// <returns></returns>
+    public bool IsInTransition()
+    {
+        return isInTransition;
     }
 
     /// <summary>
@@ -69,5 +85,6 @@ public class FadeScript : MonoBehaviour
     private void FadeTo(float target)
     {
         canvasGroup.alpha = Mathf.MoveTowards(canvasGroup.alpha, target, Time.deltaTime * fadeSpeed);
+        isInTransition = canvasGroup.alpha != 1 && canvasGroup.alpha != 0;
     }
 }
