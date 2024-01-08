@@ -17,6 +17,9 @@ public class FadeScript : MonoBehaviour
     /// </summary>
     public bool fadeDirection = true;
 
+    /// <summary>
+    /// Variable that holds current in-transition state.
+    /// </summary>
     private bool isInTransition = false;
     /// <summary>
     /// A CanvasGroup component attached to the same game object as this script.
@@ -51,6 +54,11 @@ public class FadeScript : MonoBehaviour
         isInTransition = true;
         fadeDirection = false;
     }
+
+    /// <summary>
+    /// Check if transition is in progress
+    /// </summary>
+    /// <returns></returns>
     public bool IsInTransition()
     {
         return isInTransition;

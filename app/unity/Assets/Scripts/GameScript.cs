@@ -24,12 +24,19 @@ public enum GameState
     exit = 11
 }
 
+/// <summary>
+/// Workaround for Dictionaries not being serializable by Unity
+/// </summary>
 [Serializable]
 public class TransitionScreen
 {
     public GameState state;
     public GameObject gameObject;
 }
+
+/// <summary>
+/// Script to control main game interaction
+/// </summary>
 
 public class GameScript : MonoBehaviour
 {
@@ -158,6 +165,9 @@ public class GameScript : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Function to quit the game
+    /// </summary>
     public void ExitGame()
     {
         Application.Quit();
