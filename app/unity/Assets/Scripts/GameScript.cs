@@ -157,6 +157,11 @@ public class GameScript : MonoBehaviour
 
                     break;
 
+                case GameState.exit:
+                    // Clear and Save
+                    Application.Quit();
+                    break;
+
                 default:
                     Debug.Log("Gamestate not set");
                     break;
