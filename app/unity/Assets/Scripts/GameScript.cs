@@ -17,9 +17,11 @@ public enum GameState
     mission = 4,
     // In mission States?
     decide = 5,
-    confirm = 6,
-    gameover = 7,
-    exit = 8
+    confirmSave = 6,
+    confirmDestroy = 7,
+    ending = 8,
+    gameover = 10,
+    exit = 11
 }
 
 [Serializable]
@@ -133,7 +135,15 @@ public class GameScript : MonoBehaviour
 
                     break;
 
-                case GameState.confirm:
+                case GameState.confirmSave:
+
+                    break;
+
+                case GameState.confirmDestroy:
+
+                    break;
+
+                case GameState.ending:
 
                     break;
 
@@ -146,5 +156,10 @@ public class GameScript : MonoBehaviour
                     break;
             }
         }
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
     }
 }
