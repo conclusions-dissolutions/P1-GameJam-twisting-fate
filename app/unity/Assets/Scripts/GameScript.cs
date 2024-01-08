@@ -46,6 +46,13 @@ public class GameScript : MonoBehaviour
     public List<TransitionScreen> TransitionScreens = new List<TransitionScreen>();
 
     /// <summary>
+    /// Script that randomly places stars in the background.
+    /// </summary>
+    [SerializeField]
+    public StarsScript StarsScript;
+
+
+    /// <summary>
     /// The previous State the game was in
     /// </summary>
     GameState LastGameState;
