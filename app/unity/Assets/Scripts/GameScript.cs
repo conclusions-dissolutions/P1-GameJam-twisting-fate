@@ -37,7 +37,6 @@ public class TransitionScreen
 /// <summary>
 /// Script to control main game interaction
 /// </summary>
-
 public class GameScript : MonoBehaviour
 {
     /// <summary>
