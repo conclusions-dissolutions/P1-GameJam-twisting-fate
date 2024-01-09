@@ -4206,6 +4206,8 @@ MonoBehaviour:
   - {fileID: 1528787167357437625, guid: 029cb406bac7993489a79fb4a479db19, type: 3}
   - {fileID: 3109211933398217268, guid: e226c4eb79d01db4cb4a92b0b4f8f349, type: 3}
   - {fileID: 7394351171565650475, guid: 597d6044183759d47bf063c4f4e7cd1d, type: 3}
+  seed: -1
+  maxStarsPerSector: 10
 --- !u!1 &1994547350
 GameObject:
   m_ObjectHideFlags: 0
