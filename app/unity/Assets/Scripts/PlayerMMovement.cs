@@ -2,30 +2,47 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerMMovement : MonoBehaviour
 {
-    //Changable speed for the player var.
+    /// <summary>
+    /// Changable speed for the player var.
+    /// </summary>
     public float speed = 0.1f;
 
-    //Vector3 of the start pos var.
+    /// <summary>
+    /// Vector3 of the start pos var.
+    /// </summary>
     private Vector3 startDest;
-    //Vector3 of the end pos var.
+    /// <summary>
+    /// Vector3 of the end pos var.
+    /// </summary>
     private Vector3 endDest;
-    //Start time var.
+    /// <summary>
+    /// Start time var.
+    /// </summary>
     private float startTime;
-    //Length from start to end vars var.
+    /// <summary>
+    /// Length from start to end vars var.
+    /// </summary>
     private float journeyLength;
-    //Boolean to check if the left click is held down.
+    /// <summary>
+    /// Boolean to check if the left click is held down.
+    /// </summary>
     private bool leftClickedDown;
 
-    // Start is called before the first frame update
+    /// <summary>
+    /// Start is called before the first frame update
+    /// </summary>
     void Start()
     {
         //Grabs the time before the first frame and stores it into startTime.
         startTime = Time.time;
     }
 
-    // Update is called once per frame
+    /// <summary>
+    /// Update is called once per frame
+    /// </summary>
     void Update()
     {
         //If the left mouse button (lmb, Fire1) is pressed down, leftClickedDown is true, else false.
