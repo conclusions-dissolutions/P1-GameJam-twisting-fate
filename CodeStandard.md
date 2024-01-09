@@ -15,6 +15,7 @@ So if you add code comments in when you about to go into review, that's A-OK. I 
 1. Rule of thumb - Continuous Documentation.
 2. Be sure to always keep a space between props and functions.
 3. In function comments are with two slashes. `//`
+4. No Magic Numbers: Values that don't have an obvious meaning
 
 ## Example Class
 
