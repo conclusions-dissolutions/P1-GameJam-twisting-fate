@@ -2041,6 +2041,7 @@ GameObject:
   m_Component:
   - component: {fileID: 720370130}
   - component: {fileID: 720370129}
+  - component: {fileID: 720370131}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -2159,6 +2160,26 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &720370131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720370128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b20ae3c35b4e894f83367d9e51dd0f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TheAudioSource: {fileID: 720370129}
+  BGM_Tracks:
+  - {fileID: 8300000, guid: eec763520c9e0ec4ebb00fc82ad9e890, type: 3}
+  - {fileID: 8300000, guid: d990a6b261c40bb4daf9ccf8fbf15cee, type: 3}
+  - {fileID: 8300000, guid: 648cd451e6a0cf04690a552082cf9df3, type: 3}
+  - {fileID: 8300000, guid: 68d9ea23a2b677e4ba45757709f74f14, type: 3}
+  - {fileID: 8300000, guid: 21aa215974e975547bcbac3fd6993b22, type: 3}
+  ShouldBePlaying: 0
 --- !u!1 &758711361
 GameObject:
   m_ObjectHideFlags: 0
