@@ -1,4 +1,4 @@
-// A class that implements a twinkling effect for stars with improved performance and randomization.
+// A class that implements a twinkling effect for stars with randomization.
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -45,7 +45,7 @@ public class StarTwinkle : MonoBehaviour
     private Vector3 _initialScale;
 
     /// <summary>
-    /// Initializes the StarTwinkleImproved component and sets up the references to the bright and dim star transforms.
+    /// Initializes the StarTwinkle component and sets up the references to the bright and dim star transforms.
     /// </summary>
     private void Start()
     {
