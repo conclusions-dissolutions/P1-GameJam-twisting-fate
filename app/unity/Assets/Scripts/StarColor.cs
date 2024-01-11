@@ -36,4 +36,13 @@ public class StarColor : MonoBehaviour
             _dimStar.GetComponent<SpriteRenderer>().color = starColor;
         }
     }
+
+    /// <summary>
+    /// Update star color explicitly/programmatically.
+    /// </summary>
+    public void UpdateStarColor(Color color)
+    {
+        starColor = color;
+        OnValidate();
+    }
 }

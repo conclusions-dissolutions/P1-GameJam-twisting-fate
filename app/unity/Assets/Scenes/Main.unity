@@ -3575,6 +3575,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1494370636}
+  - component: {fileID: 1494370637}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -3598,6 +3599,26 @@ Transform:
   - {fileID: 8851420953244891452}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1494370637
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1494370635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb7536268eec704e9fee4c9245b7844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  background: {fileID: 1494370635}
+  starPrefabs:
+  - {fileID: 3495646869888221308, guid: 2b01d993b164c78258ace0eb6f65303d, type: 3}
+  seed: -1
+  maxStarsPerSector: 15
+  smallStarsPercentage: 95
+  mediumStarsPercentage: 4
+  largeStarsPercentage: 1
 --- !u!1 &1600137064
 GameObject:
   m_ObjectHideFlags: 0
@@ -4140,7 +4161,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1971659375}
   - component: {fileID: 1971659376}
-  - component: {fileID: 1971659377}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -4188,26 +4208,6 @@ MonoBehaviour:
     gameObject: {fileID: 1665810259}
   - state: 7
     gameObject: {fileID: 1665810259}
-  StarsScript: {fileID: 0}
---- !u!114 &1971659377
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1971659374}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efb7536268eec704e9fee4c9245b7844, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  background: {fileID: 1494370635}
-  starPrefabs:
-  - {fileID: 1528787167357437625, guid: 029cb406bac7993489a79fb4a479db19, type: 3}
-  - {fileID: 3109211933398217268, guid: e226c4eb79d01db4cb4a92b0b4f8f349, type: 3}
-  - {fileID: 7394351171565650475, guid: 597d6044183759d47bf063c4f4e7cd1d, type: 3}
-  seed: -1
-  maxStarsPerSector: 10
 --- !u!1 &1994547350
 GameObject:
   m_ObjectHideFlags: 0

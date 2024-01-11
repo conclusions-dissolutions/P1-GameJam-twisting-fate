@@ -24,7 +24,22 @@ public class StarsScript : MonoBehaviour
     /// <summary>
     /// Maximum amount of stars per sector.
     /// </summary>
-    public int maxStarsPerSector = 10;
+    public int maxStarsPerSector = 15;
+
+    /// <summary>
+    /// Percentage of stars that should be the smallest and not twinkling.
+    /// </summary>
+    public int smallStarsPercentage = 95;
+
+    /// <summary>
+    /// Percentage of stars that should be medium sized and twinkling.
+    /// </summary>
+    public int mediumStarsPercentage = 4;
+
+    /// <summary>
+    /// Percentage of stars that should be the the largest and twinkling.
+    /// </summary>
+    public int largeStarsPercentage = 1;
 
     /// <summary>
     /// The X coordinate of the lower left corner of the game screen.
@@ -49,11 +64,59 @@ public class StarsScript : MonoBehaviour
     private readonly float sectorHeight = 1.96f;
 
     /// <summary>
+    /// Scale for the smallest stars. Should be the majority, but is configurable.
+    /// </summary>
+    private readonly float minStarScale = 0.04f;
+
+    /// <summary>
+    /// List of possible colors for stars in HEX format. Source: https://clarkvision.com/articles/color-of-stars/
+    /// Used Color Picker on an image with stars of all colors.
+    /// </summary>
+    private readonly List<string> starColors = new()
+    {
+        "#668AC8",
+        "#768CC8",
+        "#7992C8",
+        "#6F8FC8",
+        "#7394C7",
+        "#7495C8",
+        "#82A6C8",
+        "#8AAEC8",
+        "#84A6C9",
+        "#94B0C8",
+        "#97AFC7",
+        "#A1B8C8",
+        "#A4BFC8",
+        "#B8C8C8",
+        "#BFC9C0",
+        "#C4C5C0",
+        "#C1C8C0",
+        "#C8C8C8",
+        "#BFC8AD",
+        "#C8B5A6",
+        "#C8C8A4",
+        "#C8C3BD",
+        "#C8B9A2",
+        "#C8B386",
+        "#C8996F",
+        "#C8A263",
+        "#C98642",
+        "#C88D49",
+        "#C88954",
+        "#C77836",
+        "#C8352E"
+    };
+
+    /// <summary>
     /// Goes through coordinates of the main game screen sector from bottom left corner to top right corner.
-    /// Populates small sectors of background with a random number of star prefabs. 0-5 stars per sector.
+    /// Populates small sectors of background with a random number of star prefabs. Number of stars per sector is configurable.
     /// </summary>
     public void Awake()
     {
+        if (smallStarsPercentage + mediumStarsPercentage + largeStarsPercentage != 100)
+            throw new System.Exception("Please make sure that the sum of small, medium, and large star percentage values is equal to 100.");
+
+
         if (seed >= 0)
             Random.InitState(seed);
 
@@ -67,11 +130,15 @@ public class StarsScript : MonoBehaviour
                 int starsPerSector = Random.Range(0, maxStarsPerSector + 1);
                 for (int i = 0; i < starsPerSector; i++)
                 {
+                    // Random number between 0 and 100 to decide the scale of the star.
+                    int starPercentage = Random.Range(0, 101);
                     PlaceStar(
                         x: Random.Range(x, x + sectorWidth),
                         y: Random.Range(y, y + sectorHeight),
                         starIndex: Random.Range(0, starPrefabs.Count),
-                        starScale: Random.Range(0.05f, 0.10f));
+                        starScale: starPercentage > smallStarsPercentage + mediumStarsPercentage
+                        ? Random.Range(0.07f, 0.1f)
+                        : starPercentage > smallStarsPercentage ? Random.Range(0.04f, 0.07f) : minStarScale);
                 }
             }
         }
@@ -89,5 +156,25 @@ public class StarsScript : MonoBehaviour
     {
         GameObject star = Instantiate(starPrefabs[starIndex], new Vector3(x, y, 0), Quaternion.identity, background.transform) as GameObject;
         star.transform.localScale = new Vector3(starScale, starScale);
+
+        StarColor starColor = star.GetComponent<StarColor>();
+        if (starColor)
+        {
+            ColorUtility.TryParseHtmlString(starColors[Random.Range(0, starColors.Count)], out Color color);
+            starColor.UpdateStarColor(color);
+        }
+
+        StarTwinkle twinkle = star.GetComponent<StarTwinkle>();
+        if (!twinkle) return;
+
+        if (starScale == minStarScale)
+            twinkle.DisableTwinkle();
+        else
+        {
+            float halfDefaultFrequency = twinkle.twinklingFrequency / 2;
+            float halfDefaultAmplitude = twinkle.twinklingFrequency / 2;
+            twinkle.twinklingFrequency = Random.Range(halfDefaultFrequency, twinkle.twinklingFrequency + halfDefaultFrequency);
+            twinkle.twinklingAmplitude = Random.Range(halfDefaultAmplitude, twinkle.twinklingAmplitude + halfDefaultAmplitude);
+        }
     }
 }
