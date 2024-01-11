@@ -487,6 +487,7 @@ GameObject:
   - component: {fileID: 328888693}
   - component: {fileID: 328888692}
   - component: {fileID: 328888691}
+  - component: {fileID: 328888694}
   m_Layer: 5
   m_Name: Start
   m_TagString: Untagged
@@ -608,6 +609,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328888689}
   m_CullTransparentMesh: 1
+--- !u!114 &328888694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328888689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a769beb7175df77b0b6e2683fc09cf90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 3bcfeaeb51a6aaf5484a01ff6eb36f06, type: 3}
+  clickSound: {fileID: 8300000, guid: 4308decd71cd50fcbb70728997132fe0, type: 3}
+  errorSound: {fileID: 8300000, guid: f281479a6d53285a6a19ccfd278a43e0, type: 3}
 --- !u!1 &336571579
 GameObject:
   m_ObjectHideFlags: 0
@@ -1022,6 +1038,7 @@ GameObject:
   - component: {fileID: 396058380}
   - component: {fileID: 396058379}
   - component: {fileID: 396058378}
+  - component: {fileID: 396058381}
   m_Layer: 5
   m_Name: Yes
   m_TagString: Untagged
@@ -1143,6 +1160,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396058376}
   m_CullTransparentMesh: 1
+--- !u!114 &396058381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396058376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a769beb7175df77b0b6e2683fc09cf90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 3bcfeaeb51a6aaf5484a01ff6eb36f06, type: 3}
+  clickSound: {fileID: 8300000, guid: 4308decd71cd50fcbb70728997132fe0, type: 3}
+  errorSound: {fileID: 8300000, guid: f281479a6d53285a6a19ccfd278a43e0, type: 3}
 --- !u!1 &440685647
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,6 +1187,7 @@ GameObject:
   - component: {fileID: 440685651}
   - component: {fileID: 440685650}
   - component: {fileID: 440685649}
+  - component: {fileID: 440685652}
   m_Layer: 5
   m_Name: Blocked1
   m_TagString: Untagged
@@ -1276,6 +1309,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 440685647}
   m_CullTransparentMesh: 1
+--- !u!114 &440685652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 440685647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a769beb7175df77b0b6e2683fc09cf90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 3bcfeaeb51a6aaf5484a01ff6eb36f06, type: 3}
+  clickSound: {fileID: 8300000, guid: 4308decd71cd50fcbb70728997132fe0, type: 3}
+  errorSound: {fileID: 8300000, guid: f281479a6d53285a6a19ccfd278a43e0, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2043,6 +2091,7 @@ GameObject:
   - component: {fileID: 758711365}
   - component: {fileID: 758711364}
   - component: {fileID: 758711363}
+  - component: {fileID: 758711366}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -2164,6 +2213,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 758711361}
   m_CullTransparentMesh: 1
+--- !u!114 &758711366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 758711361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a769beb7175df77b0b6e2683fc09cf90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 3bcfeaeb51a6aaf5484a01ff6eb36f06, type: 3}
+  clickSound: {fileID: 8300000, guid: 4308decd71cd50fcbb70728997132fe0, type: 3}
+  errorSound: {fileID: 8300000, guid: f281479a6d53285a6a19ccfd278a43e0, type: 3}
 --- !u!1 &797291796
 GameObject:
   m_ObjectHideFlags: 0
@@ -2176,6 +2240,7 @@ GameObject:
   - component: {fileID: 797291800}
   - component: {fileID: 797291799}
   - component: {fileID: 797291798}
+  - component: {fileID: 797291801}
   m_Layer: 5
   m_Name: No
   m_TagString: Untagged
@@ -2297,6 +2362,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 797291796}
   m_CullTransparentMesh: 1
+--- !u!114 &797291801
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797291796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a769beb7175df77b0b6e2683fc09cf90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 3bcfeaeb51a6aaf5484a01ff6eb36f06, type: 3}
+  clickSound: {fileID: 8300000, guid: 4308decd71cd50fcbb70728997132fe0, type: 3}
+  errorSound: {fileID: 8300000, guid: f281479a6d53285a6a19ccfd278a43e0, type: 3}
 --- !u!1 &912046647
 GameObject:
   m_ObjectHideFlags: 0
@@ -2309,6 +2389,7 @@ GameObject:
   - component: {fileID: 912046651}
   - component: {fileID: 912046650}
   - component: {fileID: 912046649}
+  - component: {fileID: 912046652}
   m_Layer: 5
   m_Name: No
   m_TagString: Untagged
@@ -2430,6 +2511,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912046647}
   m_CullTransparentMesh: 1
+--- !u!114 &912046652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 912046647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a769beb7175df77b0b6e2683fc09cf90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 3bcfeaeb51a6aaf5484a01ff6eb36f06, type: 3}
+  clickSound: {fileID: 8300000, guid: 4308decd71cd50fcbb70728997132fe0, type: 3}
+  errorSound: {fileID: 8300000, guid: f281479a6d53285a6a19ccfd278a43e0, type: 3}
 --- !u!1 &924118107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2912,6 +3008,7 @@ GameObject:
   - component: {fileID: 1302946156}
   - component: {fileID: 1302946155}
   - component: {fileID: 1302946154}
+  - component: {fileID: 1302946157}
   m_Layer: 5
   m_Name: Yes
   m_TagString: Untagged
@@ -3033,6 +3130,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302946152}
   m_CullTransparentMesh: 1
+--- !u!114 &1302946157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302946152}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a769beb7175df77b0b6e2683fc09cf90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 3bcfeaeb51a6aaf5484a01ff6eb36f06, type: 3}
+  clickSound: {fileID: 8300000, guid: 4308decd71cd50fcbb70728997132fe0, type: 3}
+  errorSound: {fileID: 8300000, guid: f281479a6d53285a6a19ccfd278a43e0, type: 3}
 --- !u!1 &1371677849
 GameObject:
   m_ObjectHideFlags: 0
@@ -3045,6 +3157,7 @@ GameObject:
   - component: {fileID: 1371677853}
   - component: {fileID: 1371677852}
   - component: {fileID: 1371677851}
+  - component: {fileID: 1371677854}
   m_Layer: 5
   m_Name: Blocked2
   m_TagString: Untagged
@@ -3166,6 +3279,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371677849}
   m_CullTransparentMesh: 1
+--- !u!114 &1371677854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371677849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a769beb7175df77b0b6e2683fc09cf90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 3bcfeaeb51a6aaf5484a01ff6eb36f06, type: 3}
+  clickSound: {fileID: 8300000, guid: 4308decd71cd50fcbb70728997132fe0, type: 3}
+  errorSound: {fileID: 8300000, guid: f281479a6d53285a6a19ccfd278a43e0, type: 3}
 --- !u!1 &1420403791
 GameObject:
   m_ObjectHideFlags: 0
@@ -3178,6 +3306,7 @@ GameObject:
   - component: {fileID: 1420403795}
   - component: {fileID: 1420403794}
   - component: {fileID: 1420403793}
+  - component: {fileID: 1420403796}
   m_Layer: 5
   m_Name: Blocked1
   m_TagString: Untagged
@@ -3299,6 +3428,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1420403791}
   m_CullTransparentMesh: 1
+--- !u!114 &1420403796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1420403791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a769beb7175df77b0b6e2683fc09cf90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 3bcfeaeb51a6aaf5484a01ff6eb36f06, type: 3}
+  clickSound: {fileID: 8300000, guid: 4308decd71cd50fcbb70728997132fe0, type: 3}
+  errorSound: {fileID: 8300000, guid: f281479a6d53285a6a19ccfd278a43e0, type: 3}
 --- !u!1 &1456628804
 GameObject:
   m_ObjectHideFlags: 0
@@ -3311,6 +3455,7 @@ GameObject:
   - component: {fileID: 1456628808}
   - component: {fileID: 1456628807}
   - component: {fileID: 1456628806}
+  - component: {fileID: 1456628809}
   m_Layer: 5
   m_Name: Environment
   m_TagString: Untagged
@@ -3432,6 +3577,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1456628804}
   m_CullTransparentMesh: 1
+--- !u!114 &1456628809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1456628804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a769beb7175df77b0b6e2683fc09cf90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 3bcfeaeb51a6aaf5484a01ff6eb36f06, type: 3}
+  clickSound: {fileID: 8300000, guid: 4308decd71cd50fcbb70728997132fe0, type: 3}
+  errorSound: {fileID: 8300000, guid: f281479a6d53285a6a19ccfd278a43e0, type: 3}
 --- !u!1 &1474739500
 GameObject:
   m_ObjectHideFlags: 0
@@ -3631,6 +3791,7 @@ GameObject:
   - component: {fileID: 1600137068}
   - component: {fileID: 1600137067}
   - component: {fileID: 1600137066}
+  - component: {fileID: 1600137069}
   m_Layer: 5
   m_Name: Blocked2
   m_TagString: Untagged
@@ -3752,6 +3913,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1600137064}
   m_CullTransparentMesh: 1
+--- !u!114 &1600137069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1600137064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a769beb7175df77b0b6e2683fc09cf90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 3bcfeaeb51a6aaf5484a01ff6eb36f06, type: 3}
+  clickSound: {fileID: 8300000, guid: 4308decd71cd50fcbb70728997132fe0, type: 3}
+  errorSound: {fileID: 8300000, guid: f281479a6d53285a6a19ccfd278a43e0, type: 3}
 --- !u!1 &1634012030
 GameObject:
   m_ObjectHideFlags: 0
@@ -4220,6 +4396,7 @@ GameObject:
   - component: {fileID: 1994547354}
   - component: {fileID: 1994547353}
   - component: {fileID: 1994547352}
+  - component: {fileID: 1994547355}
   m_Layer: 5
   m_Name: Forest
   m_TagString: Untagged
@@ -4341,6 +4518,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994547350}
   m_CullTransparentMesh: 1
+--- !u!114 &1994547355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994547350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a769beb7175df77b0b6e2683fc09cf90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hoverSound: {fileID: 8300000, guid: 3bcfeaeb51a6aaf5484a01ff6eb36f06, type: 3}
+  clickSound: {fileID: 8300000, guid: 4308decd71cd50fcbb70728997132fe0, type: 3}
+  errorSound: {fileID: 8300000, guid: f281479a6d53285a6a19ccfd278a43e0, type: 3}
 --- !u!1 &2079508830
 GameObject:
   m_ObjectHideFlags: 0
