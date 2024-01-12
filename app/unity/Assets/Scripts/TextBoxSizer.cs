@@ -103,17 +103,6 @@ public class TextBoxSizer : MonoBehaviour
     public float PreferredHeight { get { return _preferredHeight; } }
 
     /// <summary>
-    /// Finds the PreferredHeight and then changes the text box to match it
-    /// </summary>
-    private void SetHeight()
-    {
-        if (TextMeshPro == null) return;
-
-        Rect.sizeDelta = new Vector2(Rect.sizeDelta.x, TextMeshPro.preferredHeight + backgroundHeightOffset);
-        _tmpRecTransform.sizeDelta = new Vector2(Rect.sizeDelta.x, TextMeshPro.preferredHeight);
-    }
-
-    /// <summary>
     /// Holds the width that TMP thinks it should be
     /// </summary>
     private float _preferredWidth;
@@ -122,17 +111,6 @@ public class TextBoxSizer : MonoBehaviour
     /// Interface for _preferredWidth
     /// </summary>
     public float PreferredWidth { get { return _preferredWidth; } }
-
-    /// <summary>
-    /// Finds the PreferredWidth and then changes the text box to match it
-    /// </summary>
-    private void SetWidth()
-    {
-        if (TextMeshPro == null) return;
-
-        Rect.sizeDelta = new Vector2(TextMeshPro.preferredWidth + backgroundWidthOffset, Rect.sizeDelta.y);
-        _tmpRecTransform.sizeDelta = new Vector2(TextMeshPro.preferredWidth, Rect.sizeDelta.y);
-    }
 
     /// <summary>
     /// Sets both the Height and the Width of the Text box
