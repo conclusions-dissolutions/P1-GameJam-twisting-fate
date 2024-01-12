@@ -369,6 +369,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1355105629}
   - component: {fileID: 1355105630}
+  - component: {fileID: 1355105633}
   - component: {fileID: 1355105632}
   - component: {fileID: 1355105631}
   m_Layer: 5
@@ -455,6 +456,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1355105628}
   m_CullTransparentMesh: 1
+--- !u!114 &1355105633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355105628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c92e5ecda7ff33d48bbeecb37e045029, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textToPrint: Happy little life forms
+  speed: 0.2
+  isTyping: 0
+  _textMeshProUGUI: {fileID: 0}
 --- !u!1 &1648994266
 GameObject:
   m_ObjectHideFlags: 0
