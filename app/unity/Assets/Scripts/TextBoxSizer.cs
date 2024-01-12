@@ -7,14 +7,14 @@ using UnityEngine;
 public class TextBoxSizer : MonoBehaviour
 {
     /// <summary>
-    /// 
+    /// Extends the height of the background image past the text size
     /// </summary>
-    public float _offsetHeight = 0;
+    public float backgroundHeightOffset = 0;
 
     /// <summary>
-    /// 
+    /// Extends the width of the background image past the text size
     /// </summary>
-    public float _offsetWidth = 0;
+    public float backgroundWidthOffset = 0;
 
     /// <summary>
     /// the heights the box will grow
@@ -29,13 +29,25 @@ public class TextBoxSizer : MonoBehaviour
     public float maxWidth = -1;
 
     /// <summary>
-    /// 
+    /// This forces the height of the text box to a fix value
+    /// -1 means it will not force the value
+    /// </summary>
+    public float fixedHeight = -1;
+
+    /// <summary>
+    /// This forces the width of the text box to a fix value
+    /// -1 means it will not force the value
+    /// </summary>
+    public float fixedWidth = -1;
+
+    /// <summary>
+    /// Test renderer for the text box
     /// </summary>
     [SerializeField]
     private TMPro.TextMeshProUGUI _textMeshProUGUI;
 
     /// <summary>
-    /// 
+    /// Gets and sets the render and the transforms of the children
     /// </summary>
     public TMPro.TextMeshProUGUI TextMeshPro
     {
@@ -52,12 +64,12 @@ public class TextBoxSizer : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    /// Rectangle Transform of the current object this script is attached too
     /// </summary>
     private RectTransform recTransform;
 
     /// <summary>
-    /// 
+    /// interface for recTransform
     /// </summary>
     public RectTransform Rect { 
         get { 
@@ -71,65 +83,74 @@ public class TextBoxSizer : MonoBehaviour
      }
 
     /// <summary>
-    /// 
+    /// Rectangle Transform of the child TMP
     /// </summary>
     private RectTransform _tmpRecTransform;
 
     /// <summary>
-    /// 
+    /// interface for _tmpRecTransform
     /// </summary>
     public RectTransform TMPRectTransform { get { return _tmpRecTransform; } }
 
     /// <summary>
-    /// 
+    /// Holds the height that TMP thinks it should be
     /// </summary>
     private float _preferredHeight;
 
     /// <summary>
-    /// 
+    /// Interface for _preferredHeight
     /// </summary>
     public float PreferredHeight { get { return _preferredHeight; } }
 
     /// <summary>
-    /// 
+    /// Finds the PreferredHeight and then changes the text box to match it
     /// </summary>
     private void SetHeight()
     {
         if (TextMeshPro == null) return;
 
-        Rect.sizeDelta = new Vector2(Rect.sizeDelta.x, TextMeshPro.preferredHeight + _offsetHeight);
+        Rect.sizeDelta = new Vector2(Rect.sizeDelta.x, TextMeshPro.preferredHeight + backgroundHeightOffset);
         _tmpRecTransform.sizeDelta = new Vector2(Rect.sizeDelta.x, TextMeshPro.preferredHeight);
     }
 
-
     /// <summary>
-    /// 
+    /// Holds the width that TMP thinks it should be
     /// </summary>
     private float _preferredWidth;
 
     /// <summary>
-    /// 
+    /// Interface for _preferredWidth
     /// </summary>
     public float PreferredWidth { get { return _preferredWidth; } }
 
     /// <summary>
-    /// 
+    /// Finds the PreferredWidth and then changes the text box to match it
     /// </summary>
     private void SetWidth()
     {
         if (TextMeshPro == null) return;
 
-        Rect.sizeDelta = new Vector2(TextMeshPro.preferredWidth + _offsetWidth, Rect.sizeDelta.y);
+        Rect.sizeDelta = new Vector2(TextMeshPro.preferredWidth + backgroundWidthOffset, Rect.sizeDelta.y);
         _tmpRecTransform.sizeDelta = new Vector2(TextMeshPro.preferredWidth, Rect.sizeDelta.y);
     }
 
     /// <summary>
-    /// 
+    /// Sets both the Height and the Width of the Text box
     /// </summary>
-    private void resizeBox()
+    private void SetSize()
     {
-        SetHeight();
-        SetWidth();
+        if (TextMeshPro == null) return;
+
+        Rect.sizeDelta = new Vector2(TextMeshPro.preferredWidth + backgroundWidthOffset, TextMeshPro.preferredHeight + backgroundHeightOffset);
+        _tmpRecTransform.sizeDelta = new Vector2(TextMeshPro.preferredWidth, TextMeshPro.preferredHeight);
+    }
+
+    /// <summary>
+    /// Calls all functions needed to resize the box
+    /// </summary>
+    private void ResizeBox()
+    {
+        SetSize();
     }
 
     /// <summary>
@@ -137,7 +158,7 @@ public class TextBoxSizer : MonoBehaviour
     /// </summary>
     private void OnEnable()
     {
-        resizeBox();
+        ResizeBox();
     }
 
     /// <summary>
@@ -145,7 +166,7 @@ public class TextBoxSizer : MonoBehaviour
     /// </summary>
     void Start()
     {
-        resizeBox();
+        ResizeBox();
     }
 
     /// <summary>
@@ -153,9 +174,13 @@ public class TextBoxSizer : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if (_preferredHeight != TextMeshPro.preferredHeight + _offsetHeight || _preferredWidth != TextMeshPro.preferredWidth + _offsetWidth)
+        if (
+            _preferredHeight != TextMeshPro.preferredHeight + backgroundHeightOffset 
+            || 
+            _preferredWidth != TextMeshPro.preferredWidth + backgroundWidthOffset
+        )
         {
-            resizeBox();
+            ResizeBox();
         }
     }
 }
