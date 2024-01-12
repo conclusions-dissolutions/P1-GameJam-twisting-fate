@@ -2298,7 +2298,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -4672,9 +4672,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1653199234}
   m_Enabled: 1
-  m_Alpha: 1
+  m_Alpha: 0
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &1653199237
 MonoBehaviour:
@@ -4689,7 +4689,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fadeSpeed: 1
-  fadeDirection: 1
+  fadeDirection: 0
 --- !u!1 &1662750030
 GameObject:
   m_ObjectHideFlags: 0
@@ -4908,6 +4908,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1723044420 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3388826042704255505, guid: d7a7ab8d4c380594e97d61c7a53ed9db, type: 3}
+  m_PrefabInstance: {fileID: 8740249263842292967}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c803fa317cc0fd4287a831b16f77560, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1931637392
 GameObject:
   m_ObjectHideFlags: 0
@@ -5032,6 +5043,7 @@ MonoBehaviour:
     gameObject: {fileID: 1665810259}
   - state: 7
     gameObject: {fileID: 1665810259}
+  levelLoader: {fileID: 1723044420}
 --- !u!1 &1994547350
 GameObject:
   m_ObjectHideFlags: 0
@@ -5123,7 +5135,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 5
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -5640,6 +5652,67 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1001 &8740249263842292967
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2442762995868490229, guid: d7a7ab8d4c380594e97d61c7a53ed9db, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149465407758747428, guid: d7a7ab8d4c380594e97d61c7a53ed9db, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149465407758747428, guid: d7a7ab8d4c380594e97d61c7a53ed9db, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149465407758747428, guid: d7a7ab8d4c380594e97d61c7a53ed9db, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149465407758747428, guid: d7a7ab8d4c380594e97d61c7a53ed9db, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149465407758747428, guid: d7a7ab8d4c380594e97d61c7a53ed9db, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149465407758747428, guid: d7a7ab8d4c380594e97d61c7a53ed9db, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149465407758747428, guid: d7a7ab8d4c380594e97d61c7a53ed9db, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149465407758747428, guid: d7a7ab8d4c380594e97d61c7a53ed9db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149465407758747428, guid: d7a7ab8d4c380594e97d61c7a53ed9db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149465407758747428, guid: d7a7ab8d4c380594e97d61c7a53ed9db, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939099771263070959, guid: d7a7ab8d4c380594e97d61c7a53ed9db, type: 3}
+      propertyPath: m_Name
+      value: LevelLoader
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d7a7ab8d4c380594e97d61c7a53ed9db, type: 3}
 --- !u!4 &8851420953244891452
 Transform:
   m_ObjectHideFlags: 0
@@ -5711,6 +5784,7 @@ SpriteRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 8740249263842292967}
   - {fileID: 519420032}
   - {fileID: 720370130}
   - {fileID: 619394802}

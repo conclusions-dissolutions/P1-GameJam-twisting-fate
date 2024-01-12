@@ -56,6 +56,11 @@ public class GameScript : MonoBehaviour
     GameState CurrentGameState;
 
     /// <summary>
+    /// Instance of a level loader to initiate transition to puzzle scene(s).
+    /// </summary>
+    public LevelLoader levelLoader;
+
+    /// <summary>
     /// In the middle of a transition.
     /// </summary>
     bool Transitioning;
@@ -66,6 +71,13 @@ public class GameScript : MonoBehaviour
     void Start()
     {
         CurrentGameState = GameState.start;
+
+        // If we arrive from another scene - initiate transition to a scene chosen by previous scene.
+        if (PersistentVariables.gameState > 0)
+        {
+            ChangeState(PersistentVariables.gameState);
+            PersistentVariables.gameState = 0;
+        }
     }
 
     /// <summary>
@@ -87,7 +99,6 @@ public class GameScript : MonoBehaviour
         {
             GameObject lastObject = TransitionScreens.FirstOrDefault(x => x.state == LastGameState)?.gameObject;
             GameObject currentObject = TransitionScreens.FirstOrDefault(x => x.state == CurrentGameState)?.gameObject;
-
             if (lastObject)
             {
                 CanvasGroup canvasGroup = lastObject.GetComponent<CanvasGroup>();
@@ -103,6 +114,10 @@ public class GameScript : MonoBehaviour
                 {
                     currentObject.GetComponent<FadeScript>().FadeIn();
                     currentObject.GetComponent<CanvasGroup>().blocksRaycasts = true;
+                    Transitioning = false;
+                }
+                else if (!isFadingOut)
+                {
                     Transitioning = false;
                 }
             }
@@ -134,7 +149,7 @@ public class GameScript : MonoBehaviour
                     break;
 
                 case GameState.mission:
-
+                    levelLoader.LoadNextLevel(1);
                     break;
 
                 case GameState.decide:
