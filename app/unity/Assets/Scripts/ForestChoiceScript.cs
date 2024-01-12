@@ -13,6 +13,11 @@ public class ForestChoiceScript : MonoBehaviour
     public LevelLoader levelLoader;
 
     /// <summary>
+    /// Instance of animator to trigger the leaver pull animation.
+    /// </summary>
+    public Animator animator;
+
+    /// <summary>
     /// The boolean choice associated with collision.
     /// </summary>
     public bool choice;
@@ -24,6 +29,7 @@ public class ForestChoiceScript : MonoBehaviour
     /// <param name="collision"></param>
     void OnCollisionEnter2D(Collision2D collision)
     {
+        animator.SetTrigger("Pull");
         PersistentVariables.forestPuzzleChoice = choice;
         levelLoader.LoadNextLevel(0);
     }
