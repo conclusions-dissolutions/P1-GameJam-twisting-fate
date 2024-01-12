@@ -119,8 +119,32 @@ public class TextBoxSizer : MonoBehaviour
     {
         if (TextMeshPro == null) return;
 
-        Rect.sizeDelta = new Vector2(TextMeshPro.preferredWidth + backgroundWidthOffset, TextMeshPro.preferredHeight + backgroundHeightOffset);
-        _tmpRecTransform.sizeDelta = new Vector2(TextMeshPro.preferredWidth, TextMeshPro.preferredHeight);
+        Vector2 newPreferredSize = new Vector2(TextMeshPro.preferredWidth, TextMeshPro.preferredHeight);
+
+        if (fixedWidth > -1)
+        {
+            newPreferredSize.x = fixedWidth;
+        }
+
+        if (fixedHeight > -1)
+        {
+            newPreferredSize.y = fixedHeight;
+        }
+
+        if (maxWidth > -1)
+        {
+            if (newPreferredSize.x > maxWidth) newPreferredSize.x = maxWidth;
+        }
+
+        if (maxHeight > -1)
+        {
+            if (newPreferredSize.y > maxHeight) newPreferredSize.y = maxHeight;
+        }
+
+        {
+            Rect.sizeDelta = new Vector2(newPreferredSize.x + backgroundWidthOffset, newPreferredSize.y + backgroundHeightOffset);
+            _tmpRecTransform.sizeDelta = newPreferredSize;
+        }
     }
 
     /// <summary>
@@ -152,6 +176,8 @@ public class TextBoxSizer : MonoBehaviour
     /// </summary>
     void Update()
     {
+
+        // Might want to add logic to check fixedWidth and fixedHeight, it should only need to be set once. 
         if (
             _preferredHeight != TextMeshPro.preferredHeight + backgroundHeightOffset 
             || 
