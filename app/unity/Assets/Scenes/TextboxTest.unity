@@ -469,8 +469,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textToPrint: Happy little life forms
-  speed: 0.2
-  isTyping: 0
+  speed: 0.1
   _textMeshProUGUI: {fileID: 0}
 --- !u!1 &1648994266
 GameObject:
