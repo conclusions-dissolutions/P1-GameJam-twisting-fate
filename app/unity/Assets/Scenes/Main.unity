@@ -2709,6 +2709,8 @@ GameObject:
   - component: {fileID: 720370130}
   - component: {fileID: 720370129}
   - component: {fileID: 720370131}
+  - component: {fileID: 720370133}
+  - component: {fileID: 720370132}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -2726,7 +2728,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: eec763520c9e0ec4ebb00fc82ad9e890, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 68d9ea23a2b677e4ba45757709f74f14, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2846,7 +2848,64 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 648cd451e6a0cf04690a552082cf9df3, type: 3}
   - {fileID: 8300000, guid: 68d9ea23a2b677e4ba45757709f74f14, type: 3}
   - {fileID: 8300000, guid: 21aa215974e975547bcbac3fd6993b22, type: 3}
-  ShouldBePlaying: 0
+  SoundFiles: []
+  ShouldBePlaying: 3
+--- !u!114 &720370132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720370128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9177829feb21c1b4a9b65d26efe101e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: 5d9d88e500528a048bcba11ab2da250e, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 720370131}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: StopBGM
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &720370133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 720370128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9177829feb21c1b4a9b65d26efe101e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameEvent: {fileID: 11400000, guid: f79aae20432c2b44283a089f93d05dbd, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 720370131}
+        m_TargetAssemblyTypeName: AudioPlayer, Assembly-CSharp
+        m_MethodName: SetBGM
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &758711361
 GameObject:
   m_ObjectHideFlags: 0
