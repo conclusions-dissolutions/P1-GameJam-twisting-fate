@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 /// <summary>
-/// Main controller of all sounds and music
+/// Main controller of all sounds and music.
 /// </summary>
 public class AudioPlayer : MonoBehaviour
 {
