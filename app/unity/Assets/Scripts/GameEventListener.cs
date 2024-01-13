@@ -30,22 +30,22 @@ Component can allow you to listen in to only pay attention to a given component.
 public class CustomGameEvent : UnityEvent<Component, object>{}
 
 /// <summary>
-/// 
+/// Used to intercept and direct Game Events
 /// </summary>
 public class GameEventListener : MonoBehaviour
 {
     /// <summary>
-    /// 
+    /// What event to listen for.
     /// </summary>
     public GameEvent gameEvent;
 
     /// <summary>
-    /// 
+    /// Handles caring data to a target function.
     /// </summary>
     public CustomGameEvent response;
 
     /// <summary>
-    /// 
+    /// Called when the component is enabled.
     /// </summary>
     private void OnEnable()
     {
@@ -53,7 +53,7 @@ public class GameEventListener : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    /// Called when the component is disabled.
     /// </summary>
     private void OnDisable()
     {
@@ -61,7 +61,7 @@ public class GameEventListener : MonoBehaviour
     }
 
     /// <summary>
-    /// 
+    /// Pass on info to the response.
     /// </summary>
     public void OnEventRaised(Component sender, object data)
     {

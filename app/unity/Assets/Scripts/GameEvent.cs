@@ -21,35 +21,44 @@ onNameEvent.Rase(this, 0);
  */
 
 /// <summary>
-/// 
+/// Custom class that is used to hold all those who listen for a given event.
 /// </summary>
 [CreateAssetMenu(menuName = "GameEvent")]
 public class GameEvent : ScriptableObject
 {
     /// <summary>
-    /// 
+    /// Holds all registered listeners
     /// </summary>
     public List<GameEventListener> listeners = new List<GameEventListener>();
 
     // Raise event through different methods signatures
 
+    /// <summary>
+    /// Call listeners that are registered
+    /// </summary>
     public void Raise()
     {
         Raise(null, null);
     }
 
+    /// <summary>
+    /// Call listeners that are registered
+    /// </summary>
     public void Raise(Component sender)
     {
         Raise(sender, null);
     }
 
+    /// <summary>
+    /// Call listeners that are registered
+    /// </summary>
     public void Raise(object data)
     {
         Raise(null, data);
     }
 
     /// <summary>
-    /// 
+    /// Call listeners that are registered
     /// </summary>
     public void Raise(Component sender, object data)
     {
