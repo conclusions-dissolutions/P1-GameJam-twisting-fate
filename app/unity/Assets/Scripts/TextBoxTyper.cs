@@ -24,7 +24,7 @@ public class TextBoxTyper : MonoBehaviour
     public float delayBetweenText = -1;
 
     /// <summary>
-    /// 
+    /// Float that is reused to keep track of time between text printed.
     /// </summary>
     private float delayTimerBeetweenText;
 
@@ -34,13 +34,19 @@ public class TextBoxTyper : MonoBehaviour
     private string textToPrint;
 
     /// <summary>
-    /// 
+    /// List of every line of text that needs to be printed
     /// </summary>
     public List<string> listOfTextToPrint;
 
+    [Header("Events")]
 
     /// <summary>
-    /// 
+    /// The event to fire off when the text box is destroyed.
+    /// </summary>
+    public GameEvent onTextBoxDestroy;
+
+    /// <summary>
+    /// tracker for which text we should be printing
     /// </summary>
     private int textIndex = 0;
 
@@ -143,6 +149,10 @@ public class TextBoxTyper : MonoBehaviour
                 destroyAfter -= Time.deltaTime;
                 if (destroyAfter < 0)
                 {
+                    if (onTextBoxDestroy != null)
+                    {
+                        onTextBoxDestroy.Raise(this, GameState.mainMenu);
+                    }
                     Destroy(gameObject);
                 }
             }

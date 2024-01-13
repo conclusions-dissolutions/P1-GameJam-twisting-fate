@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[ExecuteInEditMode] // This attribute indicates that the script should be executed in the editor, allowing for real-time updates.
+///[ExecuteInEditMode] // This attribute indicates that the script should be executed in the editor, allowing for real-time updates.
 [AddComponentMenu("Layout/Text Box Sizer")]
 public class TextBoxSizer : MonoBehaviour
 {
@@ -52,6 +52,14 @@ public class TextBoxSizer : MonoBehaviour
     public TMPro.TextMeshProUGUI TextMeshPro
     {
         get {
+
+            if (_textMeshProUGUI == null && transform.GetComponentInChildren<TMPro.TextMeshProUGUI>())
+            {
+                _textMeshProUGUI = transform.GetComponentInChildren<TMPro.TextMeshProUGUI>();
+                _tmpRecTransform = _textMeshProUGUI.rectTransform;
+                _textMeshProUGUI.enableWordWrapping = false;
+            }
+
             return _textMeshProUGUI;
         }
     }
@@ -162,13 +170,6 @@ public class TextBoxSizer : MonoBehaviour
     /// </summary>
     private void OnEnable()
     {
-        if (_textMeshProUGUI == null && transform.GetComponentInChildren<TMPro.TextMeshProUGUI>())
-        {
-            _textMeshProUGUI = transform.GetComponentInChildren<TMPro.TextMeshProUGUI>();
-            _tmpRecTransform = _textMeshProUGUI.rectTransform;
-            _textMeshProUGUI.enableWordWrapping = false;
-        }
-
         ResizeBox();
     }
 
@@ -177,13 +178,6 @@ public class TextBoxSizer : MonoBehaviour
     /// </summary>
     void Start()
     {
-        if (_textMeshProUGUI == null && transform.GetComponentInChildren<TMPro.TextMeshProUGUI>())
-        {
-            _textMeshProUGUI = transform.GetComponentInChildren<TMPro.TextMeshProUGUI>();
-            _tmpRecTransform = _textMeshProUGUI.rectTransform;
-            _textMeshProUGUI.enableWordWrapping = false;
-        }
-
         ResizeBox();
     }
 
