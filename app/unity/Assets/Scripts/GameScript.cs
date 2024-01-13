@@ -134,7 +134,7 @@ public class GameScript : MonoBehaviour
             switch (CurrentGameState)
             {
                 case GameState.start:
-                    ChangeState(Convert.ToInt32(GameState.mainMenu));
+                    
                     break;
 
                 case GameState.mainMenu:
@@ -195,5 +195,18 @@ public class GameScript : MonoBehaviour
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+
+    /// <summary>
+    /// Event listener for ChangeState
+    /// </summary>
+    /// <param name="sender">What component set the event</param>
+    /// <param name="data"></param>
+    public void ChangeState(Component sender, object data)
+    {
+        ChangeState((int)data);
+
+        //if (data is int) ChangeState((int)data);
     }
 }
