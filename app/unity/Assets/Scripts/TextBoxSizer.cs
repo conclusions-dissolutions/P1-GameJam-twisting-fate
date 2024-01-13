@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+[ExecuteInEditMode] // This attribute indicates that the script should be executed in the editor, allowing for real-time updates.
 [AddComponentMenu("Layout/Text Box Sizer")]
 public class TextBoxSizer : MonoBehaviour
 {
@@ -148,7 +148,7 @@ public class TextBoxSizer : MonoBehaviour
 
         {
             Rect.sizeDelta = new Vector2(newPreferredSize.x + backgroundWidthOffset, newPreferredSize.y + backgroundHeightOffset);
-            _tmpRecTransform.sizeDelta = newPreferredSize;
+            if (_tmpRecTransform) _tmpRecTransform.sizeDelta = newPreferredSize;
         }
     }
 
