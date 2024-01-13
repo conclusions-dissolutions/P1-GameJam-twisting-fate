@@ -12,5 +12,5 @@ public static class PersistentVariables
     /// <summary>
     /// Choice taken in the Forest puzzle.
     /// </summary>
-    public static bool forestPuzzleChoice;
+    public static bool? forestPuzzleChoice;
 }

@@ -380,6 +380,7 @@ GameObject:
   m_Component:
   - component: {fileID: 182890579}
   - component: {fileID: 182890580}
+  - component: {fileID: 182890581}
   m_Layer: 0
   m_Name: FATE
   m_TagString: Untagged
@@ -454,6 +455,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &182890581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 182890578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acf0798b4e250634cb28b7e82a92bdaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fateSprite: {fileID: 182890580}
+  lumberjacksLeaver: {fileID: 935507674}
+  activistsLeaver: {fileID: 478163551}
+  player: {fileID: 149196886}
 --- !u!1001 &324490648
 PrefabInstance:
   m_ObjectHideFlags: 0
