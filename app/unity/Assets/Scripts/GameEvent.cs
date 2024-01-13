@@ -2,6 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/*
+How To:
+
+To add an event dispatcher, add this to your class
+
+//// As a Prop
+
+[Header("Events")]
+public GameEvent onNameEvent;
+
+//// Later In code
+
+// Be sure to add your data when needed
+onNameEvent.Rase(this, 0);
+
+ */
+
 /// <summary>
 /// 
 /// </summary>
