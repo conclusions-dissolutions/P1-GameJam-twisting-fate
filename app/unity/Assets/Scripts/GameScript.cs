@@ -21,7 +21,8 @@ public enum GameState
     confirmDestroy = 7,
     ending = 8,
     gameover = 10,
-    exit = 11
+    exit = 11,
+    controls = 12
 }
 
 /// <summary>
@@ -175,6 +176,10 @@ public class GameScript : MonoBehaviour
                 case GameState.exit:
                     // Clear and Save
                     Application.Quit();
+                    break;
+
+                case GameState.controls:
+
                     break;
 
                 default:
