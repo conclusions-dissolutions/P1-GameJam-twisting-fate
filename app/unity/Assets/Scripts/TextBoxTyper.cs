@@ -12,9 +12,37 @@ public class TextBoxTyper : MonoBehaviour
     public float destroyAfter = -1;
 
     /// <summary>
+    /// Number of seconds before it starts typing
+    /// -1 means it's disabled.
+    /// </summary>
+    public float delayStart = -1;
+
+    /// <summary>
+    /// Before we clear and start typing the next one
+    /// -1 means it's disabled.
+    /// </summary>
+    public float delayBetweenText = -1;
+
+    /// <summary>
+    /// 
+    /// </summary>
+    private float delayTimerBeetweenText;
+
+    /// <summary>
     /// What will be displayed char by char
     /// </summary>
-    public string textToPrint;
+    private string textToPrint;
+
+    /// <summary>
+    /// 
+    /// </summary>
+    public List<string> listOfTextToPrint;
+
+
+    /// <summary>
+    /// 
+    /// </summary>
+    private int textIndex = 0;
 
     /// <summary>
     /// Seconds till the next character
@@ -76,6 +104,9 @@ public class TextBoxTyper : MonoBehaviour
         if (TextMeshPro == null) return; // ERROR IF TRUE!
 
         _textMeshProUGUI.text = "";
+
+        delayTimerBeetweenText = delayBetweenText;
+        textToPrint = listOfTextToPrint[0];
     }
 
     /// <summary>
@@ -85,8 +116,27 @@ public class TextBoxTyper : MonoBehaviour
     {
         if (_textMeshProUGUI == null) return; // ERROR IF TRUE!
 
+        if (delayStart > 0)
+        {
+            delayStart -= Time.deltaTime;
+            return;
+        }
+
         if (!isTyping)
         {
+            if (textIndex < listOfTextToPrint.Count)
+            {
+                delayTimerBeetweenText -= Time.deltaTime;
+                if (delayTimerBeetweenText < 0)
+                {
+                    isTyping = true;
+                    _textMeshProUGUI.text = "";
+                    textToPrint = listOfTextToPrint[textIndex];
+                }
+
+                return;
+            }
+
             /// IFF we have a delay timer destroy after that time has passed
             if (destroyAfter > 0)
             {
@@ -114,6 +164,8 @@ public class TextBoxTyper : MonoBehaviour
             if (currentText.Length == textToPrint.Length)
             {
                 isTyping = false;
+                textIndex++;
+                delayTimerBeetweenText = delayBetweenText;
                 return;
             }
             currentText += textToPrint[currentText.Length];
