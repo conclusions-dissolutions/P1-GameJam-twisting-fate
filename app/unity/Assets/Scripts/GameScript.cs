@@ -81,7 +81,6 @@ public class GameScript : MonoBehaviour
     /// </summary>
     void Start()
     {
-        PersistentVariables.isFreshStart = false;
         CurrentGameState = GameState.start;
 
         // If we arrive from another scene - initiate transition to a scene chosen by previous scene.
@@ -149,7 +148,7 @@ public class GameScript : MonoBehaviour
                     break;
 
                 case GameState.mainMenu:
-
+                    PersistentVariables.isFreshStart = false;
                     break;
 
                 case GameState.subjectSelect:
@@ -206,7 +205,7 @@ public class GameScript : MonoBehaviour
     /// <returns></returns>
     IEnumerator GameEnd(string endTrigger)
     {
-        fateCanvasGroup.alpha = 0;
+        fateCanvasGroup.alpha = Mathf.MoveTowards(fateCanvasGroup.alpha, 0, Time.deltaTime);
         // Play end animation
         earthAnimator.SetTrigger(endTrigger);
 
