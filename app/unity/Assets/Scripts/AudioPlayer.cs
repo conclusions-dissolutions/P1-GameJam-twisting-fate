@@ -1,6 +1,18 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
+/// <summary>
+/// Enum of music tracks.
+/// </summary>
+[Serializable]
+public enum BGMs { OST_NEUTRAL, OST_SAD, OST_LIGHT_02, OST_Menu, Forest_ambiance }
+
+/// <summary>
+/// 
+/// </summary>
+public enum Sounds { }
 
 /// <summary>
 /// Main controller of all sounds and music.
@@ -13,22 +25,35 @@ public class AudioPlayer : MonoBehaviour
     public static AudioPlayer instance;
 
     /// <summary>
+    /// 
+    /// </summary>
+    private bool ShouldPlay = true;
+
+    /// <summary>
     /// Plays the music and sounds
     /// </summary>
     [SerializeField] AudioSource TheAudioSource;
 
     /// <summary>
+    /// In game sound tracks.
     /// The order of the audio files in the array and the order of filenames in the enumerator must be 
     /// in the same order for this to work. See the example.png in the audio folder.
     /// </summary>
     [SerializeField] AudioClip[] BGM_Tracks;
 
     /// <summary>
-    /// Enum of music tracks.
+    /// All in game sound files
     /// </summary>
-    public enum BGMs { OST_NEUTRAL, OST_SAD, OST_LIGHT_02, OST_Menu, Forest_ambiance }
+    [SerializeField] AudioClip[] SoundFiles;
 
+    /// <summary>
+    /// What the player is currently playing
+    /// </summary>
     BGMs CurrentPlaying = BGMs.OST_NEUTRAL;
+
+    /// <summary>
+    /// What the player should be playing
+    /// </summary>
     [SerializeField] BGMs ShouldBePlaying = BGMs.OST_NEUTRAL;
 
     /// <summary>
@@ -51,6 +76,10 @@ public class AudioPlayer : MonoBehaviour
     /// </summary>
     void Update()
     {
+        if (!ShouldPlay && TheAudioSource.isPlaying)
+        {
+            TheAudioSource.Stop();
+        }
         if (CurrentPlaying != ShouldBePlaying)
         {
             TheAudioSource.Stop();
@@ -85,5 +114,38 @@ public class AudioPlayer : MonoBehaviour
     public void PlayClip(AudioClip clip)
     {
         TheAudioSource.PlayOneShot(clip);
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="data"></param>
+    public void SetBGM(Component sender, object data)
+    {
+        if (data is not int) return;
+
+        ShouldBePlaying = (BGMs)data;
+        ShouldPlay = true;
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="sender"></param>
+    /// <param name="data"></param>
+    public void StopBGM(Component sender, object data)
+    {
+        ShouldPlay = false;
+    }
+
+    public void PlaySound(Component sender, object data)
+    {
+        if (data is not int) return;
+        int soundIndex = (int)data;
+
+        if (soundIndex > SoundFiles.Length) return; //TODO: THROW ERROR
+
+        TheAudioSource.PlayOneShot(SoundFiles[soundIndex]);
     }
 }
