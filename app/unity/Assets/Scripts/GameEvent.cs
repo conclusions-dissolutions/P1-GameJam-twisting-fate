@@ -23,7 +23,7 @@ onNameEvent.Rase(this, 0);
 /// <summary>
 /// 
 /// </summary>
-[CreateAssetMenu(menuName ="GameEvent")]
+[CreateAssetMenu(menuName = "GameEvent")]
 public class GameEvent : ScriptableObject
 {
     /// <summary>
@@ -33,12 +33,27 @@ public class GameEvent : ScriptableObject
 
     // Raise event through different methods signatures
 
+    public void Raise()
+    {
+        Raise(null, null);
+    }
+
+    public void Raise(Component sender)
+    {
+        Raise(sender, null);
+    }
+
+    public void Raise(object data)
+    {
+        Raise(null, data);
+    }
+
     /// <summary>
     /// 
     /// </summary>
     public void Raise(Component sender, object data)
     {
-        for (int i =0; i < listeners.Count; i++)
+        for (int i = 0; i < listeners.Count; i++)
         {
             listeners[i].OnEventRaised(sender, data);
         }
@@ -52,7 +67,8 @@ public class GameEvent : ScriptableObject
     /// <param name="listener"></param>
     public void RegisterListener(GameEventListener listener)
     {
-        if (!listeners.Contains(listener)) listeners.Add(listener);
+        if (!listeners.Contains(listener))
+            listeners.Add(listener);
     }
 
     /// <summary>
@@ -61,7 +77,8 @@ public class GameEvent : ScriptableObject
     /// <param name="listener"></param>
     public void UnregisterListener(GameEventListener listener)
     {
-        if (!listeners.Contains(listener)) listeners.Remove(listener);
+        if (listeners.Contains(listener))
+            listeners.Remove(listener);
     }
 
 

@@ -57,7 +57,7 @@ public class GameEventListener : MonoBehaviour
     /// </summary>
     private void OnDisable()
     {
-        gameEvent.RegisterListener(this);
+        gameEvent.UnregisterListener(this);
     }
 
     /// <summary>
