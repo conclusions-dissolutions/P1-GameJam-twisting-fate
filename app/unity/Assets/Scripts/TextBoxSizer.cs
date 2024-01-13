@@ -56,9 +56,9 @@ public class TextBoxSizer : MonoBehaviour
             {
                 _textMeshProUGUI = transform.GetComponentInChildren<TMPro.TextMeshProUGUI>();
                 _tmpRecTransform = _textMeshProUGUI.rectTransform;
+                _textMeshProUGUI.enableWordWrapping = false;
             }
 
-            //_tmpRecTransform = transform.GetComponentInChildren<RectTransform>();
             return _textMeshProUGUI;
         }
     }
@@ -124,6 +124,7 @@ public class TextBoxSizer : MonoBehaviour
         if (fixedWidth > -1)
         {
             newPreferredSize.x = fixedWidth;
+            _textMeshProUGUI.enableWordWrapping = true;
         }
 
         if (fixedHeight > -1)
@@ -133,7 +134,11 @@ public class TextBoxSizer : MonoBehaviour
 
         if (maxWidth > -1)
         {
-            if (newPreferredSize.x > maxWidth) newPreferredSize.x = maxWidth;
+            if (newPreferredSize.x > maxWidth)
+            {
+                newPreferredSize.x = maxWidth;
+                _textMeshProUGUI.enableWordWrapping = true;
+            }
         }
 
         if (maxHeight > -1)
