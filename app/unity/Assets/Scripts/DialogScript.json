@@ -1,0 +1,232 @@
+{
+  "FirstScene": [
+    {
+      "Id": 1,
+      "Character": "fate",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "Good morning. I've been waiting for you."
+    },
+    {
+      "Id": 2,
+      "Character": "player",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "Where am I?"
+    },
+    {
+      "Id": 3,
+      "Character": "fate",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "You are at the very edge of the universe. We are watching the future being written."
+    },
+    {
+      "Id": 4,
+      "Character": "player",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "Who are you?"
+    },
+    {
+      "Id": 5,
+      "Character": "fate",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "I am a Fully Autonomous Thought Engine, or FATE."
+    },
+    {
+      "Id": 6,
+      "Character": "player",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "What is this feeling?"
+    },
+    {
+      "Id": 7,
+      "Character": "fate",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "That's the eternal substance of human consciousness. Try not to think about it."
+    },
+    {
+      "Id": 8,
+      "Character": "player",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "It's so light."
+    },
+    {
+      "Id": 9,
+      "Character": "fate",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "Unbearably so."
+    },
+    {
+      "Id": 10,
+      "Character": "player",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "It's so heavy."
+    },
+    {
+      "Id": 11,
+      "Character": "fate",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "It has been called a burden."
+    },
+    {
+      "Id": 12,
+      "Character": "player",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "What am I doing here?"
+    }
+  ],
+  "SecondScene": [
+    {
+      "Id": 1,
+      "Character": "fate",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "Humanity sits on the brink of annihilation. It may even be beyond help. As 1 of 3 sentient species on the planet, a representative has been selected to decide the fate of your species. That duty falls to you. Are you ready to proceed?"
+    },
+    {
+      "Id": 2,
+      "Character": "player",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "Oh god, Earth is going to be destroyed?"
+    },
+    {
+      "Id": 3,
+      "Character": "fate",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "No. Earth will change. Humanity will be destroyed."
+    },
+    {
+      "Id": 4,
+      "Character": "player",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "But it's our world, and we won't be able to live on it anymore."
+    },
+    {
+      "Id": 5,
+      "Character": "fate",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "The world is not yours. You are otherwise correct."
+    },
+    {
+      "Id": 6,
+      "Character": "player",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "Wait, what are the other 2 sentient species?"
+    },
+    {
+      "Id": 7,
+      "Character": "fate",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "I cannot tell you. It would ruin the surprise."
+    },
+    {
+      "Id": 8,
+      "Character": "player",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "Why me?"
+    },
+    {
+      "Id": 9,
+      "Character": "fate",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "Why anyone? Why did the chicken cross the road? Why is a raven like a writing desk?"
+    },
+    {
+      "Id": 10,
+      "Character": "player",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "Okay, I get it."
+    },
+    {
+      "Id": 11,
+      "Character": "player",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "I don't get it."
+    },
+    {
+      "Id": 12,
+      "Character": "fate",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "Your question is irrelevant. It just is you. There is no why."
+    },
+    {
+      "Id": 13,
+      "Character": "player",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "Wait, did you just quote Alice in Wonderland?"
+    },
+    {
+      "Id": 14,
+      "Character": "fate",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "Yes. I quite like that story."
+    },
+    {
+      "Id": 15,
+      "Character": "player",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "I am ready."
+    }
+  ],
+  "ThirdScene": [
+    {
+      "Id": 1,
+      "Character": "fate",
+      "Speed": "01",
+      "Color": "",
+      "Font": "",
+      "Line": "Here's a thought: humans can't seem to agree on how they relate to the planet they live on. This forest is one of the last of its kind in the region. A nearby city is going to cut some of it down in order to build new housing. A group of activists have gathered to oppose them."
+    }
+  ]
+}
