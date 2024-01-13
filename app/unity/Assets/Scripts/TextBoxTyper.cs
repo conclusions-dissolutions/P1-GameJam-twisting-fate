@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class TextBoxTyper : MonoBehaviour
 {
+
+    /// <summary>
+    /// Destroy the game object after a set number of seconds have passed.
+    /// -1 means it's disabled.
+    /// </summary>
+    public float destroyAfter = -1;
+
     /// <summary>
     /// What will be displayed char by char
     /// </summary>
@@ -78,7 +85,22 @@ public class TextBoxTyper : MonoBehaviour
     {
         if (_textMeshProUGUI == null) return; // ERROR IF TRUE!
 
-        if (!isTyping) return;
+        if (!isTyping)
+        {
+            /// IFF we have a delay timer destroy after that time has passed
+            if (destroyAfter > 0)
+            {
+                destroyAfter -= Time.deltaTime;
+                if (destroyAfter < 0)
+                {
+                    Destroy(gameObject);
+                }
+            }
+            else
+            {
+                return;
+            }
+        }
 
         secFromLast += Time.deltaTime;
         if (secFromLast > speed)
