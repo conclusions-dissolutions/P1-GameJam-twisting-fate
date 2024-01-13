@@ -21,24 +21,48 @@ onNameEvent.Rase(this, 0);
  */
 
 /// <summary>
-/// 
+/// Custom class that is used to hold all those who listen for a given event.
 /// </summary>
-[CreateAssetMenu(menuName ="GameEvent")]
+[CreateAssetMenu(menuName = "GameEvent")]
 public class GameEvent : ScriptableObject
 {
     /// <summary>
-    /// 
+    /// Holds all registered listeners
     /// </summary>
     public List<GameEventListener> listeners = new List<GameEventListener>();
 
     // Raise event through different methods signatures
 
     /// <summary>
-    /// 
+    /// Call listeners that are registered
+    /// </summary>
+    public void Raise()
+    {
+        Raise(null, null);
+    }
+
+    /// <summary>
+    /// Call listeners that are registered
+    /// </summary>
+    public void Raise(Component sender)
+    {
+        Raise(sender, null);
+    }
+
+    /// <summary>
+    /// Call listeners that are registered
+    /// </summary>
+    public void Raise(object data)
+    {
+        Raise(null, data);
+    }
+
+    /// <summary>
+    /// Call listeners that are registered
     /// </summary>
     public void Raise(Component sender, object data)
     {
-        for (int i =0; i < listeners.Count; i++)
+        for (int i = 0; i < listeners.Count; i++)
         {
             listeners[i].OnEventRaised(sender, data);
         }
@@ -52,7 +76,8 @@ public class GameEvent : ScriptableObject
     /// <param name="listener"></param>
     public void RegisterListener(GameEventListener listener)
     {
-        if (!listeners.Contains(listener)) listeners.Add(listener);
+        if (!listeners.Contains(listener))
+            listeners.Add(listener);
     }
 
     /// <summary>
@@ -61,7 +86,8 @@ public class GameEvent : ScriptableObject
     /// <param name="listener"></param>
     public void UnregisterListener(GameEventListener listener)
     {
-        if (!listeners.Contains(listener)) listeners.Remove(listener);
+        if (listeners.Contains(listener))
+            listeners.Remove(listener);
     }
 
 
