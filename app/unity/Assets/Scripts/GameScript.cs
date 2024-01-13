@@ -62,11 +62,6 @@ public class GameScript : MonoBehaviour
     public LevelLoader levelLoader;
 
     /// <summary>
-    /// Instance of an animator to animate Earth endings
-    /// </summary>
-    public Animator earthAnimator;
-
-    /// <summary>
     /// In the middle of a transition.
     /// </summary>
     bool Transitioning;
@@ -171,10 +166,11 @@ public class GameScript : MonoBehaviour
                     break;
 
                 case GameState.ending:
-                    StartCoroutine(LastGameState == GameState.confirmSave ? GameEnd("GoodEnd") : GameEnd("BadEnd"));
+
                     break;
 
                 case GameState.gameover:
+
                     break;
 
                 case GameState.exit:
@@ -191,25 +187,6 @@ public class GameScript : MonoBehaviour
                     break;
             }
         }
-    }
-
-    /// <summary>
-    /// Coroutine to play the game ending animation, wait a little, re-set the game state, and navigate back to main menu.
-    /// </summary>
-    /// <param name="endTrigger">Name of the trigger to start a corresponding game ending animation</param>
-    /// <returns></returns>
-    IEnumerator GameEnd(string endTrigger)
-    {
-        // Play end animation
-        earthAnimator.SetTrigger(endTrigger);
-
-        // Wait for transition to end
-        yield return new WaitForSeconds(5);
-
-        // After end animation is over - re-set values and re-load the scene.
-        PersistentVariables.gameState = 1;
-        PersistentVariables.forestPuzzleChoice = null;
-        levelLoader.LoadNextLevel(0);
     }
 
     /// <summary>
