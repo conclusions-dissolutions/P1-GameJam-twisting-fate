@@ -108,8 +108,16 @@ public class TextBoxTyper : MonoBehaviour
     void Start()
     {
         if (TextMeshPro == null) return; // ERROR IF TRUE!
-
         _textMeshProUGUI.text = "";
+
+        //TODO: HACK!
+        if (!PersistentVariables.isFreshStart)
+        {
+            listOfTextToPrint = new List<string>();
+            return;
+        }
+
+
 
         delayTimerBeetweenText = delayBetweenText;
         textToPrint = listOfTextToPrint[0];
@@ -120,7 +128,7 @@ public class TextBoxTyper : MonoBehaviour
     /// </summary>
     void Update()
     {
-        if (_textMeshProUGUI == null) return; // ERROR IF TRUE!
+        if (_textMeshProUGUI == null || listOfTextToPrint.Count == 0) return; // ERROR IF TRUE!
 
         if (delayStart > 0)
         {
@@ -169,7 +177,7 @@ public class TextBoxTyper : MonoBehaviour
 
             // Update text
             string currentText = _textMeshProUGUI.text;
-            
+
             // Would like something more hard stop
             if (currentText.Length == textToPrint.Length)
             {

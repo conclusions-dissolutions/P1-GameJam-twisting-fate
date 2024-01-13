@@ -290,7 +290,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 37, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &63283522
@@ -578,6 +578,10 @@ PrefabInstance:
       value: 40.22
       objectReference: {fileID: 0}
     - target: {fileID: 4930868949421195249, guid: 8bffbd28bb02b344786f9b214b4da56e, type: 3}
+      propertyPath: speed
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 4930868949421195249, guid: 8bffbd28bb02b344786f9b214b4da56e, type: 3}
       propertyPath: delayStart
       value: 1
       objectReference: {fileID: 0}
@@ -599,7 +603,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 2883596e56c658e4692cd04121896f4b, type: 2}
     - target: {fileID: 4930868949421195249, guid: 8bffbd28bb02b344786f9b214b4da56e, type: 3}
       propertyPath: listOfTextToPrint.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4930868949421195249, guid: 8bffbd28bb02b344786f9b214b4da56e, type: 3}
       propertyPath: listOfTextToPrint.Array.data[0]
@@ -607,21 +611,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4930868949421195249, guid: 8bffbd28bb02b344786f9b214b4da56e, type: 3}
       propertyPath: listOfTextToPrint.Array.data[1]
-      value: 'I am a Fully Autonomous Thought Engine, or FATE. '
+      value: I am a Fully Autonomous Thought Engine, or FATE.
       objectReference: {fileID: 0}
     - target: {fileID: 4930868949421195249, guid: 8bffbd28bb02b344786f9b214b4da56e, type: 3}
       propertyPath: listOfTextToPrint.Array.data[2]
       value: Humanity sits on the brink of annihilation. It may even be beyond help.
-        As 1 of 3 sentient species on the planet, a representative has been selected
-        to decide the fate of your species.
       objectReference: {fileID: 0}
     - target: {fileID: 4930868949421195249, guid: 8bffbd28bb02b344786f9b214b4da56e, type: 3}
       propertyPath: listOfTextToPrint.Array.data[3]
-      value: That duty falls to you
+      value: As 1 of 3 sentient species on the planet, a representative has been
+        selected to decide the fate of your species.
       objectReference: {fileID: 0}
     - target: {fileID: 4930868949421195249, guid: 8bffbd28bb02b344786f9b214b4da56e, type: 3}
       propertyPath: listOfTextToPrint.Array.data[4]
-      value: That duty falls to you
+      value: That duty falls to you.
       objectReference: {fileID: 0}
     - target: {fileID: 5515432206157401582, guid: 8bffbd28bb02b344786f9b214b4da56e, type: 3}
       propertyPath: m_Pivot.x
@@ -1779,6 +1782,7 @@ GameObject:
   - component: {fileID: 505232233}
   - component: {fileID: 505232232}
   - component: {fileID: 505232234}
+  - component: {fileID: 505232235}
   m_Layer: 5
   m_Name: FATE
   m_TagString: Untagged
@@ -1855,6 +1859,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4efc67ed96512041b0699044e4f6578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!225 &505232235
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 505232230}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -6094,6 +6110,7 @@ MonoBehaviour:
     gameObject: {fileID: 978353016}
   levelLoader: {fileID: 1723044420}
   earthAnimator: {fileID: 587861637}
+  fateCanvasGroup: {fileID: 505232235}
 --- !u!1 &1994547350
 GameObject:
   m_ObjectHideFlags: 0

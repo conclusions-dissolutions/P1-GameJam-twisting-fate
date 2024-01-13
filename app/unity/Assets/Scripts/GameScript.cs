@@ -67,6 +67,11 @@ public class GameScript : MonoBehaviour
     public Animator earthAnimator;
 
     /// <summary>
+    /// Fates canvas group to hide it during end game animation.
+    /// </summary>
+    public CanvasGroup fateCanvasGroup;
+
+    /// <summary>
     /// In the middle of a transition.
     /// </summary>
     bool Transitioning;
@@ -76,6 +81,7 @@ public class GameScript : MonoBehaviour
     /// </summary>
     void Start()
     {
+        PersistentVariables.isFreshStart = false;
         CurrentGameState = GameState.start;
 
         // If we arrive from another scene - initiate transition to a scene chosen by previous scene.
@@ -139,7 +145,7 @@ public class GameScript : MonoBehaviour
             switch (CurrentGameState)
             {
                 case GameState.start:
-                    
+
                     break;
 
                 case GameState.mainMenu:
@@ -200,6 +206,7 @@ public class GameScript : MonoBehaviour
     /// <returns></returns>
     IEnumerator GameEnd(string endTrigger)
     {
+        fateCanvasGroup.alpha = 0;
         // Play end animation
         earthAnimator.SetTrigger(endTrigger);
 
