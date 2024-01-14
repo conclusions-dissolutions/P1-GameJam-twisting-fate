@@ -62,6 +62,16 @@ public class GameScript : MonoBehaviour
     public LevelLoader levelLoader;
 
     /// <summary>
+    /// Instance of an animator to animate Earth endings
+    /// </summary>
+    public Animator earthAnimator;
+
+    /// <summary>
+    /// Fates canvas group to hide it during end game animation.
+    /// </summary>
+    public CanvasGroup fateCanvasGroup;
+
+    /// <summary>
     /// In the middle of a transition.
     /// </summary>
     bool Transitioning;
@@ -134,11 +144,11 @@ public class GameScript : MonoBehaviour
             switch (CurrentGameState)
             {
                 case GameState.start:
-                    ChangeState(Convert.ToInt32(GameState.mainMenu));
+
                     break;
 
                 case GameState.mainMenu:
-
+                    PersistentVariables.isFreshStart = false;
                     break;
 
                 case GameState.subjectSelect:
@@ -166,11 +176,10 @@ public class GameScript : MonoBehaviour
                     break;
 
                 case GameState.ending:
-
+                    StartCoroutine(LastGameState == GameState.confirmSave ? GameEnd("GoodEnd") : GameEnd("BadEnd"));
                     break;
 
                 case GameState.gameover:
-
                     break;
 
                 case GameState.exit:
@@ -190,10 +199,43 @@ public class GameScript : MonoBehaviour
     }
 
     /// <summary>
+    /// Coroutine to play the game ending animation, wait a little, re-set the game state, and navigate back to main menu.
+    /// </summary>
+    /// <param name="endTrigger">Name of the trigger to start a corresponding game ending animation</param>
+    /// <returns></returns>
+    IEnumerator GameEnd(string endTrigger)
+    {
+        fateCanvasGroup.alpha = Mathf.MoveTowards(fateCanvasGroup.alpha, 0, Time.deltaTime);
+        // Play end animation
+        earthAnimator.SetTrigger(endTrigger);
+
+        // Wait for transition to end
+        yield return new WaitForSeconds(5);
+
+        // After end animation is over - re-set values and re-load the scene.
+        PersistentVariables.gameState = 1;
+        PersistentVariables.forestPuzzleChoice = null;
+        levelLoader.LoadNextLevel(0);
+    }
+
+    /// <summary>
     /// Function to quit the game
     /// </summary>
     public void ExitGame()
     {
         Application.Quit();
+    }
+
+
+    /// <summary>
+    /// Event listener for ChangeState
+    /// </summary>
+    /// <param name="sender">What component set the event</param>
+    /// <param name="data"></param>
+    public void ChangeState(Component sender, object data)
+    {
+        ChangeState((int)data);
+
+        //if (data is int) ChangeState((int)data);
     }
 }

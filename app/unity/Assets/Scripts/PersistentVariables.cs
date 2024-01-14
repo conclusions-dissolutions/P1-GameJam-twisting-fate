@@ -13,4 +13,9 @@ public static class PersistentVariables
     /// Choice taken in the Forest puzzle.
     /// </summary>
     public static bool? forestPuzzleChoice;
+
+    /// <summary>
+    /// Indicator if game is freshly started or scenes has been reloading as part of an in-game mechanics.
+    /// </summary>
+    public static bool isFreshStart = true;
 }

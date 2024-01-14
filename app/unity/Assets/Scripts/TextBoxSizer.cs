@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-
+///[ExecuteInEditMode] // This attribute indicates that the script should be executed in the editor, allowing for real-time updates.
 [AddComponentMenu("Layout/Text Box Sizer")]
 public class TextBoxSizer : MonoBehaviour
 {
@@ -52,13 +52,14 @@ public class TextBoxSizer : MonoBehaviour
     public TMPro.TextMeshProUGUI TextMeshPro
     {
         get {
+
             if (_textMeshProUGUI == null && transform.GetComponentInChildren<TMPro.TextMeshProUGUI>())
             {
                 _textMeshProUGUI = transform.GetComponentInChildren<TMPro.TextMeshProUGUI>();
                 _tmpRecTransform = _textMeshProUGUI.rectTransform;
+                _textMeshProUGUI.enableWordWrapping = false;
             }
 
-            //_tmpRecTransform = transform.GetComponentInChildren<RectTransform>();
             return _textMeshProUGUI;
         }
     }
@@ -124,6 +125,7 @@ public class TextBoxSizer : MonoBehaviour
         if (fixedWidth > -1)
         {
             newPreferredSize.x = fixedWidth;
+            _textMeshProUGUI.enableWordWrapping = true;
         }
 
         if (fixedHeight > -1)
@@ -133,7 +135,15 @@ public class TextBoxSizer : MonoBehaviour
 
         if (maxWidth > -1)
         {
-            if (newPreferredSize.x > maxWidth) newPreferredSize.x = maxWidth;
+            if (newPreferredSize.x > maxWidth)
+            {
+                newPreferredSize.x = maxWidth;
+                _textMeshProUGUI.enableWordWrapping = true;
+            }
+            else
+            {
+                _textMeshProUGUI.enableWordWrapping = false;
+            }
         }
 
         if (maxHeight > -1)
@@ -143,7 +153,7 @@ public class TextBoxSizer : MonoBehaviour
 
         {
             Rect.sizeDelta = new Vector2(newPreferredSize.x + backgroundWidthOffset, newPreferredSize.y + backgroundHeightOffset);
-            _tmpRecTransform.sizeDelta = newPreferredSize;
+            if (_tmpRecTransform) _tmpRecTransform.sizeDelta = newPreferredSize;
         }
     }
 

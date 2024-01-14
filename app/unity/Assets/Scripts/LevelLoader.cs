@@ -26,7 +26,7 @@ public class LevelLoader : MonoBehaviour
     public void LoadNextLevel(int levelIndex)
     {
         //Navigate to "Decision" part of the main scene if we navigate there. Assuming that we always navigate there from puzzle levels
-        if (levelIndex == 0)
+        if (levelIndex == 0 && PersistentVariables.forestPuzzleChoice.HasValue)
             PersistentVariables.gameState = 5;
 
         StartCoroutine(LoadLevel(levelIndex));
