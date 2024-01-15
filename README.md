@@ -30,8 +30,7 @@ Team:
     
   Animators/Art:
     C.sam
-    DSingh*
-    Echo*
+    Echo
     Tenise
 
   Music/Sound:
