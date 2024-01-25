@@ -2,10 +2,10 @@
 
 Follow the Last Human’s Consciousness being Guided by F.A.T.E. to relive the Disasters that Destroyed humanity, while building the perspective to determine if Humanity Should Live Again.
 
-Description: Twisting Fate is an open-source 2D decison-making platformer game where your choices will affect the different endings you can receive.
+Description: Twisting Fate is an open-source 2D decision-making platformer game where your choices will affect the different endings you can receive.
 
 Controls:
-  Right Mouse Button (RMB) while pressed moves the player. 
+  Right Mouse Button (RMB) while pressed moves the player.
   Left Mouse Button (LMB) lets the player jump.
 
 Theme:
@@ -13,28 +13,45 @@ Theme:
 
 Art Style:
   Color Palette:
-    Dark Blues, Gray, White, Black
+	Dark Blues, Gray, White, Black
   Background:
-    Solid
-  
+	Solid
+ 
 Music:
   Retro, Ambient, Sci-Fi
 
 Team:
-  Programnmers:
-    Bastien Auxer
-    Cep
-    Jugemu
-    MotH
-    Takumi_panda
+  Programmers:
+	Bastien Auxer
+	Cep
+	Jugemu
+	MotH
+	Takumi_panda
     
   Animators/Art:
-    C.sam
-    Echo
-    Tenise
+	C.sam
+	Echo
+	Tenise
 
   Music/Sound:
-    Loukas Drivas
+	Loukas Drivas
 
   Story Writer:
-    Aza
+	Aza
+	Bastien Auxer
+	DSingh
+	Loukas Drivas
+	Takumi_panda
+
+## Folder Setup
+
+### external
+
+This holds all the files for asset building or temp assets that are place holders.
+These are files that are otherwise not used in the application.
+
+Think of Maya, Gimp, Photoshop save files.
+
+### app -> unity
+
+This hold the unity project fold for the application.
