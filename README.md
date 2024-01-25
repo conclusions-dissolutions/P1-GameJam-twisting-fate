@@ -5,43 +5,58 @@ Follow the Last Human’s Consciousness being Guided by F.A.T.E. to relive the D
 Description: Twisting Fate is an open-source 2D decision-making platformer game where your choices will affect the different endings you can receive.
 
 Controls:
-  Right Mouse Button (RMB) while pressed moves the player.
-  Left Mouse Button (LMB) lets the player jump.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Right Mouse Button (RMB) while pressed moves the player.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Left Mouse Button (LMB) lets the player jump.
 
 Theme:
-  Sci-fi 2D Style.
+
+&nbsp;&nbsp;&nbsp;&nbsp;Sci-fi 2D Style.
 
 Art Style:
-  Color Palette:
-	Dark Blues, Gray, White, Black
-  Background:
-	Solid
+
+&nbsp;&nbsp;&nbsp;&nbsp;Color Palette:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dark Blues, Gray, White, Black
+  
+&nbsp;&nbsp;&nbsp;&nbsp;Background:
+	
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solid
  
 Music:
-  Retro, Ambient, Sci-Fi
+
+&nbsp;&nbsp;&nbsp;&nbsp;Retro, Ambient, Sci-Fi
 
 Team:
-  Programmers:
-	Bastien Auxer
-	Cep
-	Jugemu
-	MotH
-	Takumi_panda
+
+&nbsp;&nbsp;&nbsp;&nbsp;Programmers:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bastien Auxer
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cep
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jugemu
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MotH
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Takumi_panda
     
-  Animators/Art:
-	C.sam
-	Echo
-	Tenise
+&nbsp;&nbsp;&nbsp;&nbsp;Animators/Art:
 
-  Music/Sound:
-	Loukas Drivas
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C.sam
 
-  Story Writer:
-	Aza
-	Bastien Auxer
-	DSingh
-	Loukas Drivas
-	Takumi_panda
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Echo
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tenise
+
+&nbsp;&nbsp;&nbsp;&nbsp;Music/Sound:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loukas Drivas
+
+&nbsp;&nbsp;&nbsp;&nbsp;Story Writer:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aza
 
 ## Folder Setup
 
