@@ -46,3 +46,16 @@ Team:
     DSingh
     Loukas Drivas
     Takumi_panda
+
+## Folder Setup
+
+### external
+
+This holds all the files for asset building or temp assets that are place holders.
+These are files that are otherwise not used in the application.
+
+Think of Maya, Gimp, Photo Shop save files.
+
+### app -> unity
+
+This hold the unity project fold for the application.
