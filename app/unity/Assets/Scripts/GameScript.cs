@@ -22,7 +22,8 @@ public enum GameState
     ending = 8,
     gameover = 10,
     exit = 11,
-    controls = 12
+    controls = 12,
+    credits = 13
 }
 
 /// <summary>
@@ -188,6 +189,10 @@ public class GameScript : MonoBehaviour
                     break;
 
                 case GameState.controls:
+
+                    break;
+
+                case GameState.credits:
 
                     break;
 

@@ -57,6 +57,60 @@ Bastien Auxer
 DSingh
 Loukas Drivas
 Takumi_panda
+Description: Twisting Fate is an open-source 2D decision-making platformer game where your choices will affect the different endings you can receive.
+
+Controls:
+
+* Right Mouse Button (RMB) while pressed moves the player.
+
+* Left Mouse Button (LMB) lets the player jump.
+
+Theme:
+
+* Sci-fi 2D Style.
+
+Art Style:
+
+* Color Palette:
+
+* Dark Blues, Gray, White, Black
+  
+* Background:
+  * Solid
+
+Music:
+
+* Retro, Ambient, Sci-Fi
+
+Team:
+
+* Programmers:
+
+* Bastien Auxer
+
+* Cep
+
+* Jugemu
+
+* MotH
+
+* Takumi_panda
+
+* Animators/Art:
+
+* C.sam
+
+* Echo
+
+* Tenise
+
+* Music/Sound:
+
+* Loukas Drivas
+
+* Story Writer:
+
+* Aza
 
 ## Folder Setup
 
@@ -65,7 +119,7 @@ Takumi_panda
 This holds all the files for asset building or temp assets that are place holders.
 These are files that are otherwise not used in the application.
 
-Think of Maya, Gimp, Photo Shop save files.
+Think of Maya, Gimp, Photoshop save files.
 
 ### app -> unity
 
