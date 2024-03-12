@@ -2,61 +2,115 @@
 
 Follow the Last Human’s Consciousness being Guided by F.A.T.E. to relive the Disasters that Destroyed humanity, while building the perspective to determine if Humanity Should Live Again.
 
+## Description
+
+### Theme
+
+Sci-fi 2D Style.
+
+### Mechanics
+
+Movement is controlled by mouse only.
+
+## Art Style
+
+### Color Palette
+
+Dark Blues, Gray, White, Black
+
+### Background
+
+Solid
+  
+### Music
+
+Retro, Ambient, Sci-Fi
+
+## Team
+
+### Programnmers
+
+Bastien Auxer
+Cep
+Jugemu
+MotH
+Takumi_panda
+Tenise
+
+### Animators/Art
+
+Bastien Auxer
+C.sam
+DSingh
+Echo
+Tenise
+
+### Music/Sound
+
+Aza
+Loukas Drivas
+
+### Story Writer
+
+Aza
+Bastien Auxer
+DSingh
+Loukas Drivas
+Takumi_panda
 Description: Twisting Fate is an open-source 2D decision-making platformer game where your choices will affect the different endings you can receive.
 
 Controls:
 
-&nbsp;&nbsp;&nbsp;&nbsp;Right Mouse Button (RMB) while pressed moves the player.
+* Right Mouse Button (RMB) while pressed moves the player.
 
-&nbsp;&nbsp;&nbsp;&nbsp;Left Mouse Button (LMB) lets the player jump.
+* Left Mouse Button (LMB) lets the player jump.
 
 Theme:
 
-&nbsp;&nbsp;&nbsp;&nbsp;Sci-fi 2D Style.
+* Sci-fi 2D Style.
 
 Art Style:
 
-&nbsp;&nbsp;&nbsp;&nbsp;Color Palette:
+* Color Palette:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dark Blues, Gray, White, Black
+* Dark Blues, Gray, White, Black
   
-&nbsp;&nbsp;&nbsp;&nbsp;Background:
-	
- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Solid
- 
+* Background:
+  * Solid
+
 Music:
 
-&nbsp;&nbsp;&nbsp;&nbsp;Retro, Ambient, Sci-Fi
+* Retro, Ambient, Sci-Fi
 
 Team:
 
-&nbsp;&nbsp;&nbsp;&nbsp;Programmers:
+* Programmers:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bastien Auxer
+* Bastien Auxer
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cep
+* Cep
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jugemu
+* Jugemu
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MotH
+* MotH
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Takumi_panda
-    
-&nbsp;&nbsp;&nbsp;&nbsp;Animators/Art:
+* Takumi_panda
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;C.sam
+* Animators/Art:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Echo
+* C.sam
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tenise
+* Echo
 
-&nbsp;&nbsp;&nbsp;&nbsp;Music/Sound:
+* Tenise
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Loukas Drivas
+* Music/Sound:
 
-&nbsp;&nbsp;&nbsp;&nbsp;Story Writer:
+* Loukas Drivas
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Aza
+* Story Writer:
+
+* Aza
 
 ## Folder Setup
 
